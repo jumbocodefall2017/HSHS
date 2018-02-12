@@ -39,9 +39,11 @@ let resourcesIcon; // ios-help-circle-outline
 let addIcon; // ios-add-circle-outline
 
 
-// Purpose: Login page for app, leads to startapp()
-// Props: Uses props from parent Component
-// States: Initializes state with empty username/password key/val pairs
+/* Purpose: Login page for app
+ * Props: Uses props from parent Component
+ * States: Initializes state with empty username/password key/val pairs
+ * Key Functions: openapp(), startapp(), render()
+ */
 export default class Login extends Component {
     constructor(props) {
         super(props);
