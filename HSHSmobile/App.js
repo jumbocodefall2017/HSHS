@@ -6,7 +6,6 @@ import Dashboard from './src/tabs/Dashboard/Dashboard';
 import Login from './src/Login';
 import Info from './src/dummy/BoilerPlate/TemporaryTab';
 import GuestListProfile from './src/tabs/GuestList/GuestListProfile';
-import CRUDnote from './src/tabs/GuestList/CRUDnote';
 import GuestListNew from './src/tabs/GuestList/GuestListNew';
 
 export default () => {

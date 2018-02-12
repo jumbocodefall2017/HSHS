@@ -24,6 +24,10 @@ const {UIManager} = NativeModules;
 UIManager.setLayoutAnimationEnabledExperimental &&
 UIManager.setLayoutAnimationEnabledExperimental(true);
 
+// Redux related functions
+// (mapStateToProps, mapDispatchToProps)
+
+// retrieves states
 function mapStateToProps(state, ownProps) {
     return {
         actionItems: state.actionItems,
@@ -33,6 +37,7 @@ function mapStateToProps(state, ownProps) {
     };
 }
 
+// retrieves functions
 function mapDispatchToProps(dispatch, ownProps) {
     return {
         getGuests: getGuests,
@@ -41,6 +46,10 @@ function mapDispatchToProps(dispatch, ownProps) {
     };
 }
 
+// Purpose: Renders the main dashboard page, the buttons at the bottom were created in Login.js -> startapp()
+// Props: Uses props from parent, adds navigation, sets boolean for load screen.
+// State: Makes it possible for map to be full screen
+// Key Functions: render(), other firebase functions defined @mapDispatchToProps
 class Dashboard extends Component {
     constructor(props) {
         super(props);
@@ -49,9 +58,6 @@ class Dashboard extends Component {
         this.state = {
             isMapFullScreen: true
         }
-    };
-
-    componentDidMount() {
     };
 
     onNavigatorEvent(event) { // this is the onPress handler for the two buttons together

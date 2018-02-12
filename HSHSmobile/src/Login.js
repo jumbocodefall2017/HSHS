@@ -31,13 +31,19 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const Icons = require('react-native-vector-icons/Ionicons');
 
-var homeIcon // ios-home-outline
-var todolistIcon // ios-checkbox-outline
-var checkinIcon // ios-list-outline
-var guestsIcon // ios-people-outline
-var resourcesIcon // ios-help-circle-outline
-var addIcon // ios-add-circle-outline
+let homeIcon; // ios-home-outline
+let todolistIcon; // ios-checkbox-outline
+let checkinIcon; // ios-list-outline
+let guestsIcon; // ios-people-outline
+let resourcesIcon; // ios-help-circle-outline
+let addIcon; // ios-add-circle-outline
 
+
+/* Purpose: Login page for app
+ * Props: Uses props from parent Component
+ * States: Initializes state with empty username/password key/val pairs
+ * Key Functions: openapp(), startapp(), render()
+ */
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -116,7 +122,6 @@ export default class Login extends Component {
         Navigation.registerComponent('GuestListProfile', () => GuestListProfile, store, Provider);
         Navigation.registerComponent('Resources', () => Resources, store, Provider);
         Navigation.registerComponent('Info', () => Info, store, Provider);
-        Navigation.registerComponent('CRUDnote', () => CRUDnote, store, Provider);
         Navigation.registerComponent('GuestListNew', () => GuestListNew, store, Provider);
         Navigation.registerComponent('TodoList', () => TodoList, store, Provider);
         Navigation.registerComponent('TodoListItem', () => TodoListItem, store, Provider);
