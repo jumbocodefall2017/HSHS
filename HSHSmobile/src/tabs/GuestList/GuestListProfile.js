@@ -32,7 +32,6 @@ class GuestProfile extends Component {
     constructor(props) {
         super(props);
         // this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
-        this.view_crud_note_page = this.view_crud_note_page.bind(this);
         console.log(this.props.testing);
     };
 
@@ -46,20 +45,6 @@ class GuestProfile extends Component {
         return(nodeEmoji.get(this.id_to_emoji[this.profile_data.receptive]));
     };
 
-    //
-    view_crud_note_page = () => {
-      this.props.navigator.push({
-          screen: 'CRUDnote', // unique ID registered with Navigation.registerScreen
-          passProps: {
-              name: this.props.guest.name
-          }, // Object that will be passed as props to the pushed screen (optional)
-          animated: true, // does the push have transition animation or does it happen immediately (optional)
-          animationType: 'fade', // ‘fade’ (for both) / ‘slide-horizontal’ (for android) does the push have different transition animation (optional)
-          backButtonHidden: false, // hide the back button altogether (optional)
-          navigatorStyle: {}, // override the navigator style for the pushed screen (optional)
-          navigatorButtons: {} // override the nav buttons for the pushed screen (optional)
-      });
-    };
     /********************** Render functions section **********************/
 
     // renders name on profile page
@@ -157,7 +142,6 @@ class GuestProfile extends Component {
                         renderItem={({ item }) => (
                             <ListItem
                                 title={item.note}
-                                onPress={() => this.view_crud_note_page()}
                             />
                         )}
                         style={styles.note}

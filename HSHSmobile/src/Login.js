@@ -122,7 +122,6 @@ export default class Login extends Component {
         Navigation.registerComponent('GuestListProfile', () => GuestListProfile, store, Provider);
         Navigation.registerComponent('Resources', () => Resources, store, Provider);
         Navigation.registerComponent('Info', () => Info, store, Provider);
-        Navigation.registerComponent('CRUDnote', () => CRUDnote, store, Provider);
         Navigation.registerComponent('GuestListNew', () => GuestListNew, store, Provider);
         Navigation.registerComponent('TodoList', () => TodoList, store, Provider);
         Navigation.registerComponent('TodoListItem', () => TodoListItem, store, Provider);
