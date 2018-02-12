@@ -31,13 +31,17 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const Icons = require('react-native-vector-icons/Ionicons');
 
-var homeIcon // ios-home-outline
-var todolistIcon // ios-checkbox-outline
-var checkinIcon // ios-list-outline
-var guestsIcon // ios-people-outline
-var resourcesIcon // ios-help-circle-outline
-var addIcon // ios-add-circle-outline
+let homeIcon; // ios-home-outline
+let todolistIcon; // ios-checkbox-outline
+let checkinIcon; // ios-list-outline
+let guestsIcon; // ios-people-outline
+let resourcesIcon; // ios-help-circle-outline
+let addIcon; // ios-add-circle-outline
 
+
+// Purpose: Login page for app, leads to startapp()
+// Props: Uses props from parent Component
+// States: Initializes state with empty username/password key/val pairs
 export default class Login extends Component {
     constructor(props) {
         super(props);
