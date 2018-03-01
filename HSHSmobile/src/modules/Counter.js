@@ -61,34 +61,7 @@ export default class Counter extends Component {
         </TouchableOpacity>
         <Text style={styles.text}>{this.props.itemName}</Text>
       </View>
-
-                <View style={styles.container}>
-                    <TouchableOpacity onPress={this.incrementCount}>
-                        <Icon name="chevron-up" size={30} color="#900" />
-                    </TouchableOpacity>
-                    <View style={styles.circle}>
-                        <Text style={styles.text}>{this.state.count.toString()}</Text>
-                    </View>
-                    <TouchableOpacity onPress={this.decrementCount}>
-                        <Icon name="chevron-down" size={30} color="#900" />
-                    </TouchableOpacity>
-                    <Text style={styles.text}>{this.props.itemName}</Text>
-                </View>
-
-                <View style={styles.container}>
-                    <TouchableOpacity onPress={this.incrementCount}>
-                        <Icon name="chevron-up" size={30} color="#900" />
-                    </TouchableOpacity>
-                    <View style={styles.circle}>
-                        <Text style={styles.text}>{this.state.count.toString()}</Text>
-                    </View>
-                    <TouchableOpacity onPress={this.decrementCount}>
-                        <Icon name="chevron-down" size={30} color="#900" />
-                    </TouchableOpacity>
-                    <Text style={styles.text}>{this.props.itemName}</Text>
-                </View>
-
-            </View>
+        </View>
 
 		);
 	}

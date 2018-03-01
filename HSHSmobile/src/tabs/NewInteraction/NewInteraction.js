@@ -26,7 +26,7 @@ const instructions = Platform.select({
 export default class Info extends Component {
     constructor(props) {
       super(props);
-      this.counters = {"Example Counter": 666};
+      this.counters = {"Example Counter": 666, "test counter": 4, "test 3": 6};
     }
 
     // Sample function to render the item counters. To add new counters,
@@ -55,23 +55,6 @@ export default class Info extends Component {
     render() {
         return (
           <View>
-            <Text
-            onPress= {()=>{this.Popup.show()}}
-            >
-            {"Click me to open"}
-            </Text>
-            <View style={styles.container}>
-                <Popup
-                  ref={(popup) => {
-                      this.addCounterDialog = popup;
-                  }}
-                  title={"Add a New Item"}
-                  onConfirm={()=>{}}
-                  >
-                  <Text>Test</Text>
-                  <Text>Test</Text>
-                </Popup>
-            </View>
             {this.renderCounters()}
           </View>
         );
