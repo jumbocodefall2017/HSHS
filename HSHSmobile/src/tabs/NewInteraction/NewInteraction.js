@@ -26,7 +26,7 @@ const instructions = Platform.select({
 export default class Info extends Component {
     constructor(props) {
       super(props);
-      this.counters = {"Example Counter": 666, "test counter": 4, "test 3": 6};
+      this.counters = {"test1": 666, "test2" : 45, "test3" : 44};
     }
 
     // Sample function to render the item counters. To add new counters,
@@ -55,6 +55,18 @@ export default class Info extends Component {
     render() {
         return (
           <View>
+            <View style={styles.container}>
+                <Popup
+                  ref={(popup) => {
+                      this.addCounterDialog = popup;
+                  }}
+                  title={"Add a New Item"}
+                  onConfirm={()=>{}}
+                  >
+                  <Text>Test</Text>
+                  <Text>Test</Text>
+                </Popup>
+            </View>
             {this.renderCounters()}
           </View>
         );
@@ -67,6 +79,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
+        width: "33%",
     },
     instructions: {
         fontSize: 18,
@@ -78,7 +91,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
     },
     popupDialogButtons: {
       flexDirection: 'row',
@@ -87,7 +100,7 @@ const styles = StyleSheet.create({
     textInput: {
       marginTop: 3,
       height: 40,
-      width: "80%",
+      width: "33%",
       borderColor: 'gray',
       borderWidth: 1
     },
