@@ -25,50 +25,50 @@ const instructions = Platform.select({
 
 export default class Info extends Component {
     constructor(props) {
-      super(props);
-      this.counters = {"test1": 666, "test2" : 45, "test3" : 44};
+        super(props);
+        this.counters = {"test1": 666, "test2" : 45, "test3" : 44};
     }
 
     // Sample function to render the item counters. To add new counters,
     // add elements to this.counters (item list could also come from redux)
     // Counter spacing issues are probably in Counter.js
     renderCounters() {
-      let items = Object.keys(this.counters);
-      return (
-        <View style={styles.counterContainer}>
-            {
-              items.map((name) =>
-                      <Counter
-                        key={name}
-                        itemName={name}
-                        count={this.counters[name]}
-                        onValueChange={(val) =>
+        let items = Object.keys(this.counters);
+        return (
+            <View style={styles.counterContainer}>
+                {
+                    items.map((name) =>
+                        <Counter
+                            key={name}
+                            itemName={name}
+                            count={this.counters[name]}
+                            onValueChange={(val) =>
                             {
-                              this.counters[name] = val;
+                                this.counters[name] = val;
                             }}
-                      />)
-              }
-        </View>
-      );
+                        />)
+                }
+            </View>
+        );
     }
 
     render() {
         return (
-          <View>
-            <View style={styles.container}>
-                <Popup
-                  ref={(popup) => {
-                      this.addCounterDialog = popup;
-                  }}
-                  title={"Add a New Item"}
-                  onConfirm={()=>{}}
-                  >
-                  <Text>Test</Text>
-                  <Text>Test</Text>
-                </Popup>
+            <View>
+                <View style={styles.container}>
+                    <Popup
+                        ref={(popup) => {
+                            this.addCounterDialog = popup;
+                        }}
+                        title={"Add a New Item"}
+                        onConfirm={()=>{}}
+                    >
+                        <Text>Test</Text>
+                        <Text>Test</Text>
+                    </Popup>
+                </View>
+                {this.renderCounters()}
             </View>
-            {this.renderCounters()}
-          </View>
         );
     }
 }
@@ -79,7 +79,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
-        width: "33%",
     },
     instructions: {
         fontSize: 18,
@@ -94,14 +93,13 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
     },
     popupDialogButtons: {
-      flexDirection: 'row',
-      justifyContent: 'space-around'
+        flexDirection: 'row',
+        justifyContent: 'space-around'
     },
     textInput: {
-      marginTop: 3,
-      height: 40,
-      width: "33%",
-      borderColor: 'gray',
-      borderWidth: 1
+        marginTop: 3,
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1
     },
 });
