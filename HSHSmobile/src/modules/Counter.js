@@ -48,28 +48,40 @@ export default class Counter extends Component {
 
   render() {
 		return (
+            <View style={styles.flexcontainer}>
       <View style={styles.container}>
         <TouchableOpacity onPress={this.incrementCount}>
             <Icon name="chevron-up" size={30} color="#900" />
         </TouchableOpacity>
         <View style={styles.circle}>
-            <Text style={styles.text}>{this.state.count.toString()}</Text>
+            <Text style={styles.textNumbers}>{this.state.count.toString()}</Text>
         </View>
         <TouchableOpacity onPress={this.decrementCount}>
             <Icon name="chevron-down" size={30} color="#900" />
         </TouchableOpacity>
         <Text style={styles.text}>{this.props.itemName}</Text>
       </View>
+
+            </View>
+
 		);
 	}
 }
 
 const styles = StyleSheet.create({
     container: {
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems:'center',
-      margin: 2
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems:'center',
+        margin: 2,
+        width: "25%"
+    },
+    flexcontainer: {
+        padding: 0,
+        margin: 0,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems:'center',
     },
     circle: {
       flexDirection:'column',
@@ -83,5 +95,9 @@ const styles = StyleSheet.create({
     },
     text: {
       fontSize: 15,
+
+    },
+    textNumbers: {
+        fontSize: 15,
     }
 });
